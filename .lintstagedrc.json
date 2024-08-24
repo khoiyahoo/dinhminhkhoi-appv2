@@ -1,0 +1,4 @@
+{
+    "*.{ts,tsx,js}": "yarn format",
+    "!(.ladle/*).{ts,tsx,js}": "yarn lint"
+}
