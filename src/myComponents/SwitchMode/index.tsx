@@ -1,40 +1,49 @@
-import { type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { Switch } from "@/components/ui/switch";
 import darkIcon from "@/assets/icons/dark-icon.svg";
 import lightIcon from "@/assets/icons/light-icon.svg";
-import { cn } from "@/lib/utils";
+
 const SwitchMode: FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
-  const thumb = cn(
-    "after:absolute after:content-[''] after:w-5 after:h-5 after:bg-background after:rounded-full after:top-0",
-    theme === "dark" ? "after:left-0" : "after:right-0"
-  );
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
-    <div
-      className={cn(
-        "w-11 h-6 rounded-full inline-flex items-center gap-2 border-2 border-transparent bg-input relative cursor-pointer",
-        thumb,
-        theme === "dark" ? "justify-end" : "justify-start"
-      )}
-      onClick={toggleTheme}
+    <Switch
+      id="airplane-mode"
+      checked={resolvedTheme === "dark"}
+      onCheckedChange={toggleTheme}
+      className="relative"
     >
-      {theme === "dark" ? (
-        <div className="w-5 h-5 flex items-center justify-center select-none">
-          <Image src={darkIcon} alt="dark-icon" width={14} height={14} />
-        </div>
+      {resolvedTheme === "dark" ? (
+        <Image
+          src={lightIcon}
+          alt="light-icon"
+          width={14}
+          height={14}
+          className="absolute left-[3px] top-[3px]"
+        />
       ) : (
-        <div className="w-5 h-5 flex items-center justify-center select-none">
-          <Image src={lightIcon} alt="light-icon" width={14} height={14} />
-        </div>
+        <Image
+          src={darkIcon}
+          alt="dark-icon"
+          width={14}
+          height={14}
+          className="absolute right-[3px] top-[3px]"
+        />
       )}
-    </div>
+    </Switch>
   );
 };
 
