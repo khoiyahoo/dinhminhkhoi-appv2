@@ -13,10 +13,7 @@ import Typography from "@/myComponents/Typography";
 
 export function TabsMenu() {
   return (
-    <Tabs
-      defaultValue={ETab.MAIN_SKILLS}
-      className="lg:w-[calc(100%-21.875rem)] w-full"
-    >
+    <Tabs defaultValue={ETab.MAIN_SKILLS} className="w-full">
       <TabsList className="grid w-full grid-cols-3 shadow-lg">
         <TabsTrigger value={ETab.MAIN_SKILLS}>Main skills</TabsTrigger>
         <TabsTrigger value={ETab.EXPERIENCE}>Experience</TabsTrigger>

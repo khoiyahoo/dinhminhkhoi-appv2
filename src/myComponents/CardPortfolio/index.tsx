@@ -20,7 +20,7 @@ const CardPortfolio: FC<Props> = ({
   return (
     <div
       className={cn(
-        "bg-card-portfolio bg-cover lg:w-[21.875rem] w-full h-[34.375rem] rounded-2xl shadow-xl cursor-pointer",
+        "bg-card-portfolio bg-cover lg:w-[21.875rem] w-full h-[25rem] rounded-2xl shadow-xl cursor-pointer",
         className
       )}
     >
