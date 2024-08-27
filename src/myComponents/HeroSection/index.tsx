@@ -6,7 +6,7 @@ interface Props {
 const HeroSection: FC<Props> = ({ children }) => {
   return (
     <section className="mt-10">
-      <div className="container sm:px-52">{children}</div>
+      <div className="container xl:px-52">{children}</div>
     </section>
   );
 };

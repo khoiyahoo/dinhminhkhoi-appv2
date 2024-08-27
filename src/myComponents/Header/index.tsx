@@ -22,7 +22,7 @@ const Header: FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center max-sm:justify-between sm:pl-56 sm:pr-56">
+      <div className="container flex h-14 max-w-screen-2xl items-center max-sm:justify-between xl:pl-56 xl:pr-56">
         <div className="hidden sm:flex">
           <nav className="flex items-center gap-4 text-sm lg:gap-6">
             {ROUTES.map((item, index) => (
@@ -59,6 +59,7 @@ const Header: FC = () => {
                 <Link
                   key={index}
                   href={item.link}
+                  target="_blank"
                   className="transition-colors font-medium"
                 >
                   {theme === "dark" ? <IconDark /> : <IconLight />}

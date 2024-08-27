@@ -1,5 +1,6 @@
 import { type FC } from "react";
 import Typography from "@/myComponents/Typography";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroHomeContainer: FC = () => {
   return (
@@ -47,13 +48,13 @@ const HeroHomeContainer: FC = () => {
               </svg>
             </div>
             <span className="animate-text bg-conversion-01 bg-clip-text text-transparent ml-[1rem]">
-              Khoi
+              ABCD
             </span>
           </Typography>
         </div>
         <Typography
           size="small"
-          type="bold"
+          type="regular"
           variant="p"
           className="mt-2 glitch text-text-100 text-lg"
         >
@@ -61,6 +62,19 @@ const HeroHomeContainer: FC = () => {
           learn and discover something new every day. Currently work as a Web
           developer.Besides, I like to eat 🍽️ and travel everywhere 🚌
         </Typography>
+        <TypeAnimation
+          sequence={["Web Developer", 1000, "A Freelancer", 1000]}
+          speed={50}
+          style={{
+            fontSize: "2em",
+            backgroundImage: "linear-gradient(92deg, #FF6B00 0%, #F90 100%)",
+            backgroundClip: "text",
+            color: "transparent",
+            position: "relative",
+          }}
+          cursor={true}
+          repeat={Infinity}
+        />
       </div>
     </div>
   );

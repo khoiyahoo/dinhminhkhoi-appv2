@@ -18,6 +18,14 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "conversion-01": "linear-gradient(92deg, #FF6B00 0%, #F90 100%)",
+        "conversion-02": "linear-gradient(92deg, #03AACE 0%, #49D8D8 100%)",
+        "conversion-disabled":
+          "linear-gradient(92deg, #D3D3D3 0%, #E2E2E2 100%)",
+        "conversion-transparent":
+          "linear-gradient(180deg, #DDE6ED 0%, rgba(217, 217, 217, 0.25) 100%)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -69,6 +77,11 @@ const config = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
+        },
+        dash: {
+          to: {
+            "stroke-dashoffset": "0",
+          },
         },
       },
       animation: {
