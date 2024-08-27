@@ -6,10 +6,8 @@ interface Props {
 }
 
 const Wave: FC<Props> = ({ classNames = "" }) => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-
-  const isDarkMode = theme === "dark";
 
   useEffect(() => {
     setMounted(true);
@@ -38,25 +36,37 @@ const Wave: FC<Props> = ({ classNames = "" }) => {
             xlinkHref="#gentle-wave"
             x="48"
             y="0"
-            fill={isDarkMode ? "rgba(255,255,255,0.7)" : "rgba(0,0,0,0.1)"}
+            fill={
+              resolvedTheme === "dark"
+                ? "rgba(255,255,255,0.7)"
+                : "rgba(0,0,0,0.1)"
+            }
           />
           <use
             xlinkHref="#gentle-wave"
             x="48"
             y="3"
-            fill={isDarkMode ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.1)"}
+            fill={
+              resolvedTheme === "dark"
+                ? "rgba(255,255,255,0.5)"
+                : "rgba(0,0,0,0.1)"
+            }
           />
           <use
             xlinkHref="#gentle-wave"
             x="48"
             y="5"
-            fill={isDarkMode ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.1)"}
+            fill={
+              resolvedTheme === "dark"
+                ? "rgba(255,255,255,0.3)"
+                : "rgba(0,0,0,0.1)"
+            }
           />
           <use
             xlinkHref="#gentle-wave"
             x="48"
             y="7"
-            fill={isDarkMode ? "#dedede" : "#878787"}
+            fill={resolvedTheme === "dark" ? "#dedede" : "#878787"}
           />
         </g>
       </svg>

@@ -39,10 +39,10 @@ export function TabsMenu() {
               <div className="flex gap-2 items-center" key={index}>
                 <Typography size="normal" type="bold" variant="p">
                   {item.title}
-                  <CardDescription className="text-[12px]">
-                    {item.subtitle}
-                  </CardDescription>
                 </Typography>
+                <CardDescription className="text-[12px] mt-[2px]">
+                  {item.subtitle}
+                </CardDescription>
               </div>
             ))}
           </CardContent>
@@ -65,10 +65,10 @@ export function TabsMenu() {
               <div className="flex gap-2 items-center" key={index}>
                 <Typography size="normal" type="bold" variant="p">
                   {item.title}
-                  <CardDescription className="text-[12px]">
-                    {item.subtitle}
-                  </CardDescription>
                 </Typography>
+                <CardDescription className="text-[12px] mt-[2px]">
+                  {item.subtitle}
+                </CardDescription>
               </div>
             ))}
           </CardContent>
@@ -88,10 +88,10 @@ export function TabsMenu() {
             <div className="flex gap-2 items-center">
               <Typography size="normal" type="bold" variant="p">
                 HCMC University of Technology and Education
-                <CardDescription className="text-[12px]">
-                  Information of Technological
-                </CardDescription>
               </Typography>
+              <CardDescription className="text-[12px] mt-[2px]">
+                Information of Technological
+              </CardDescription>
             </div>
           </CardContent>
         </Card>

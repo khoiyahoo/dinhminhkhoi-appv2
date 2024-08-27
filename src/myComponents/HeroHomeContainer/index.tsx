@@ -26,8 +26,8 @@ const HeroHomeContainer: FC = () => {
                   className="dash"
                   d="M8.99306 23.2725C18.4418 35.9728 71.0212 33.6263 75.0924 33.2353C79.1637 32.8444 110.292 30.716 99.6952 12.3534C89.0986 -6.00909 28.5114 18.0953 25.7485 5.50946C22.9855 -7.07639 -7.80726 9.07085 3.47482 24.6747C12.9734 37.8119 65.6029 42.644 104 32.7089"
                   stroke="url(#paint0_linear_8278_9636)"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></path>
                 <defs>
                   <linearGradient
@@ -38,11 +38,11 @@ const HeroHomeContainer: FC = () => {
                     y2="-9.94537"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#F2BA73"></stop>
-                    <stop offset="0.223958" stop-color="#F2A550"></stop>
-                    <stop offset="0.479167" stop-color="#EA8D37"></stop>
-                    <stop offset="0.78125" stop-color="#F07835"></stop>
-                    <stop offset="1" stop-color="#F05322"></stop>
+                    <stop stopColor="#F2BA73"></stop>
+                    <stop offset="0.223958" stopColor="#F2A550"></stop>
+                    <stop offset="0.479167" stopColor="#EA8D37"></stop>
+                    <stop offset="0.78125" stopColor="#F07835"></stop>
+                    <stop offset="1" stopColor="#F05322"></stop>
                   </linearGradient>
                 </defs>
               </svg>
