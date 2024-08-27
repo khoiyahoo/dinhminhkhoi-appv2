@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { ROUTES } from "@/contants/common";
+import { ROUTES } from "@/constants/common";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { getPathName } from "@/utils/function";

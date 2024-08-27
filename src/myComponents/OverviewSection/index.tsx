@@ -1,9 +1,11 @@
 import { type FC } from "react";
 import Typography from "@/myComponents/Typography";
+import CardPortfolio from "@/myComponents/CardPortfolio";
+import { TabsMenu } from "@/myComponents/TabsMenu";
 
 const OverviewSection: FC = () => {
   return (
-    <section className="rounded-t-3xl xl:rounded-t-[8.5rem] pt-12 h-[100vh]">
+    <section className="rounded-t-3xl xl:rounded-t-[8.5rem] pt-12">
       <div className="container xl:px-52">
         <Typography size="normal" type="bold" variant="p">
           Introduction
@@ -29,6 +31,10 @@ const OverviewSection: FC = () => {
           up-to-date with trends to exceed expectations. Let&apos;s work
           together on your next project.
         </Typography>
+        <div className="w-full flex lg:flex-row flex-col items-start gap-4 mt-4">
+          <CardPortfolio href="https://github.com/khoiyahoo" target="_blank" />
+          <TabsMenu />
+        </div>
       </div>
     </section>
   );

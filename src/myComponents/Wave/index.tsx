@@ -1,14 +1,21 @@
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
-import { type FC } from "react";
-
+import { useEffect, useState, type FC } from "react";
 interface Props {
   classNames?: string;
 }
 
 const Wave: FC<Props> = ({ classNames = "" }) => {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
   const isDarkMode = theme === "dark";
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <div className={cn("hero-area", classNames)}>

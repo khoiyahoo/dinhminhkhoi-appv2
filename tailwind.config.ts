@@ -25,6 +25,11 @@ const config = {
           "linear-gradient(92deg, #D3D3D3 0%, #E2E2E2 100%)",
         "conversion-transparent":
           "linear-gradient(180deg, #DDE6ED 0%, rgba(217, 217, 217, 0.25) 100%)",
+        "card-portfolio": "url('/images/bg-card.jpg')",
+      },
+      boxShadow: {
+        card: "1px 10px 15px -10px #211e35",
+        circle: "0px 0px 5px #211e35",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -59,6 +64,19 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        text: {
+          100: "#FFF",
+          300: "#D2D2D2",
+          400: "#626262",
+          500: "#28282E",
+        },
+        gray: {
+          100: "#DDE6ED",
+          200: "#9DB2BF",
+          300: "#526D82",
+          400: "#393E46",
+          500: "#222831",
         },
       },
       fontFamily: {

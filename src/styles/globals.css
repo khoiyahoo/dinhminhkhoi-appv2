@@ -96,12 +96,6 @@
     animation-delay: -5s;
     animation-duration: 20s;
 }
-@media (max-width: 768px) {
-  .waves {
-      height: 40px;
-      min-height: 40px;
-  }
-}
 }
 
 @layer base {
@@ -128,11 +122,11 @@
 }
 
 @keyframes move-forever {
-  0% {
-      transform: translate3d(-90px, 0, 0);
-  }
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
 
-  100% {
-      transform: translate3d(85px, 0, 0);
-  }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
 }

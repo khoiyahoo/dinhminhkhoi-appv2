@@ -435,6 +435,34 @@ const SOCIALS = [
   },
 ];
 
+const PRIMARY_TECH = ["#REACT", "#VUE", "#CSS", "JAVASCRIPT", "TYPESCRIPT"];
+
+const SUMMARY_ABOUT_ME = [
+  {
+    title: "Frontend",
+    subtitle: "HTML5, CSS, REACT, VUE, TYPESCRIPT,...",
+  },
+  {
+    title: "Backend",
+    subtitle: "NODE, MYSQL, STRAPI, MONGODB,...",
+  },
+  {
+    title: "Code management",
+    subtitle: "GITHUB, GITLAB",
+  },
+];
+
+const SUMMARY_EXPERIENCE = [
+  {
+    title: "Frontend Developer - Pixelcent Co. Ltd.",
+    subtitle: "2022 - 2023",
+  },
+  {
+    title: "Frontend Developer - Technologial Asia Co. Ltd.",
+    subtitle: "2023 - Current",
+  },
+];
+
 export {
   services,
   technologies,
@@ -445,4 +473,7 @@ export {
   FRONT_END,
   BACK_END,
   TOOL_SERVICE,
+  PRIMARY_TECH,
+  SUMMARY_ABOUT_ME,
+  SUMMARY_EXPERIENCE,
 };

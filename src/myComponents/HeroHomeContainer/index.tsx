@@ -11,7 +11,7 @@ const HeroHomeContainer: FC = () => {
             size="normal"
             type="bold"
             variant="h2"
-            className="text-text-100 relative"
+            className="relative"
           >
             Hi, I&apos;m{" "}
             <div className="absolute left-1/2 top-[5%]">
@@ -48,7 +48,7 @@ const HeroHomeContainer: FC = () => {
               </svg>
             </div>
             <span className="animate-text bg-conversion-01 bg-clip-text text-transparent ml-[1rem]">
-              ABCD
+              Khoi
             </span>
           </Typography>
         </div>
@@ -56,7 +56,7 @@ const HeroHomeContainer: FC = () => {
           size="small"
           type="regular"
           variant="p"
-          className="mt-2 glitch text-text-100 text-lg"
+          className="mt-2 glitch text-lg"
         >
           🌱 👨🏻‍💻 I am a guy with a creative mind and like design. I would like to
           learn and discover something new every day. Currently work as a Web

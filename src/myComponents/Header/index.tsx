@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import Link from "next/link";
-import { ROUTES } from "@/contants/common";
-import { SOCIALS } from "@/contants/dummy";
+import { ROUTES } from "@/constants/common";
+import { SOCIALS } from "@/constants/dummy";
 import { useTheme } from "next-themes";
 import SwitchMode from "@/myComponents/SwitchMode";
 import HeaderPercentage from "@/myComponents/HeaderPercentage";
