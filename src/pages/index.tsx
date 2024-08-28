@@ -3,6 +3,8 @@ import HeroSection from "@/myComponents/HeroSection";
 import HeroHomeContainer from "@/myComponents/HeroHomeContainer";
 import OverviewSection from "@/myComponents/OverviewSection";
 import Wave from "@/myComponents/Wave";
+import TechStackSection from "@/myComponents/TechStackSection";
+import ServiceSection from "@/myComponents/ServiceSection";
 
 const Home: FC = () => {
   return (
@@ -12,6 +14,8 @@ const Home: FC = () => {
       </HeroSection>
       <Wave classNames="mt-40" />
       <OverviewSection />
+      <TechStackSection />
+      <ServiceSection />
     </>
   );
 };
