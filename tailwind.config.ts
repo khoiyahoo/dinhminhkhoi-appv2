@@ -28,7 +28,6 @@ const config = {
         "card-portfolio": "url('/images/bg-card.jpg')",
       },
       boxShadow: {
-        card: "1px 10px 15px -10px #211e35",
         circle: "0px 0px 5px #211e35",
       },
       colors: {
@@ -71,12 +70,16 @@ const config = {
           400: "#626262",
           500: "#28282E",
         },
+        bg: {
+          100: "#FFF",
+        },
         gray: {
           100: "#DDE6ED",
           200: "#9DB2BF",
           300: "#526D82",
           400: "#393E46",
           500: "#222831",
+          600: "#f1f5f9",
         },
       },
       fontFamily: {

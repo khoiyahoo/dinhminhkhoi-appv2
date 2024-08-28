@@ -3,9 +3,10 @@ import { useTheme } from "next-themes";
 import { useEffect, useState, type FC } from "react";
 interface Props {
   classNames?: string;
+  classNameWave?: string;
 }
 
-const Wave: FC<Props> = ({ classNames = "" }) => {
+const Wave: FC<Props> = ({ classNames = "", classNameWave = "waves" }) => {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -18,7 +19,7 @@ const Wave: FC<Props> = ({ classNames = "" }) => {
   return (
     <div className={cn("hero-area", classNames)}>
       <svg
-        className="waves"
+        className={classNameWave}
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28"

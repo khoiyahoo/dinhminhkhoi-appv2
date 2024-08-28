@@ -43,6 +43,10 @@ import { RiFacebookCircleLine, RiFacebookCircleFill } from "react-icons/ri";
 import { BiLogoLinkedinSquare } from "react-icons/bi";
 import { MdOutlineEmail, MdEmail } from "react-icons/md";
 import { TbBrandGithub, TbBrandGithubFilled } from "react-icons/tb";
+import webDesign from "@/assets/images/web-design.png";
+import webDevelop from "@/assets/images/app-development.png";
+import mobileDevelop from "@/assets/images/development.png";
+
 export const navLinks = [
   {
     id: "home",
@@ -463,6 +467,26 @@ const SUMMARY_EXPERIENCE = [
   },
 ];
 
+const SUMMARY_SERVICE = [
+  {
+    title: "Web Design",
+    subtitle:
+      "Push the boundaries of design, setting a new standard for how products interact with users.",
+    src: webDesign,
+  },
+  {
+    title: "Web Development",
+    subtitle:
+      "Create a nicely and friendly website so that people can enjoy it",
+    src: webDevelop,
+  },
+  {
+    title: "Mobile Development",
+    subtitle: "Create an enjoyable app in mobile platform",
+    src: mobileDevelop,
+  },
+];
+
 export {
   services,
   technologies,
@@ -476,4 +500,5 @@ export {
   PRIMARY_TECH,
   SUMMARY_ABOUT_ME,
   SUMMARY_EXPERIENCE,
+  SUMMARY_SERVICE,
 };
