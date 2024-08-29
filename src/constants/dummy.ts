@@ -46,7 +46,9 @@ import { TbBrandGithub, TbBrandGithubFilled } from "react-icons/tb";
 import webDesign from "@/assets/images/web-design.png";
 import webDevelop from "@/assets/images/app-development.png";
 import mobileDevelop from "@/assets/images/development.png";
-
+import { BsTelephone } from "react-icons/bs";
+import { IoMailOutline } from "react-icons/io5";
+import { IoEarthOutline } from "react-icons/io5";
 export const navLinks = [
   {
     id: "home",
@@ -487,6 +489,24 @@ const SUMMARY_SERVICE = [
   },
 ];
 
+const CONTACT = [
+  {
+    href: "tel:+0988766698",
+    title: "0988766698",
+    icon: BsTelephone,
+  },
+  {
+    href: "mailto:khoiyahoo@gmail.com",
+    title: "khoiyahoo@gmail.com",
+    icon: IoMailOutline,
+  },
+  {
+    href: "https://dinhminhkhoi.vercel.app/",
+    title: "dinhminhkhoi.vercel.app",
+    icon: IoEarthOutline,
+  },
+];
+
 export {
   services,
   technologies,
@@ -501,4 +521,5 @@ export {
   SUMMARY_ABOUT_ME,
   SUMMARY_EXPERIENCE,
   SUMMARY_SERVICE,
+  CONTACT,
 };
