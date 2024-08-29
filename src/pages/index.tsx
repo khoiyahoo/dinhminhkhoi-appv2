@@ -5,6 +5,7 @@ import OverviewSection from "@/myComponents/OverviewSection";
 import Wave from "@/myComponents/Wave";
 import TechStackSection from "@/myComponents/TechStackSection";
 import ServiceSection from "@/myComponents/ServiceSection";
+import ContactSection from "@/myComponents/ContactSection";
 
 const Home: FC = () => {
   return (
@@ -16,6 +17,7 @@ const Home: FC = () => {
       <OverviewSection />
       <TechStackSection />
       <ServiceSection />
+      <ContactSection />
     </>
   );
 };

@@ -11,7 +11,6 @@ const TechStackSection: FC = () => {
     queryKey: ["skills"],
     queryFn: SkillsService.getSkills,
     select: (res) => {
-      console.log("Selected data:", res.data);
       return res.data;
     },
     onSuccess: (data) => {
