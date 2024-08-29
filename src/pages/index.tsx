@@ -13,7 +13,7 @@ const Home: FC = () => {
       <HeroSection>
         <HeroHomeContainer />
       </HeroSection>
-      <Wave classNames="mt-40" />
+      <Wave classNames="mt-36" />
       <OverviewSection />
       <TechStackSection />
       <ServiceSection />

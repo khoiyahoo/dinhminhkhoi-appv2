@@ -4,6 +4,7 @@ import TechCard from "@/myComponents/TechCard";
 import { useQuery } from "@tanstack/react-query";
 import { SkillsService } from "@/services/skills";
 import { type ISkill } from "@/interfaces/Skills";
+import { toast } from "@/components/ui/use-toast";
 
 const TechStackSection: FC = () => {
   const [skills, setSkills] = useState<ISkill[]>([]);
@@ -18,7 +19,10 @@ const TechStackSection: FC = () => {
       setSkills(data);
     },
     onError: () => {
-      console.log("Errr");
+      toast({
+        variant: "destructive",
+        title: "Some thing went wrong",
+      });
     },
   });
 

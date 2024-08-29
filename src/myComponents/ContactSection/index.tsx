@@ -26,14 +26,19 @@ const ContactSection: FC = () => {
               variant="p"
               className="text-justify"
             >
-              I&apos;m available for every Web Programming Work. Connect me via:
+              I&apos;m open to all kinds of{" "}
+              <strong className="bg-primary text-secondary">
+                web programming projects
+              </strong>
+              . Feel free to reach out and get in touch with me for any
+              collaboration or work opportunities!
             </Typography>
           </div>
           <div className="w-full flex gap-4 flex-col md:flex-row">
             <div className="w-full lg:w-1/2">
               <FormContact />
             </div>
-            <div className="w-full lg:w-1/2 flex flex-col gap-3">
+            <div className="w-full lg:w-1/2 flex flex-col gap-3 mt-[1.75rem] lg:mt-0">
               {CONTACT.map((item, index) => {
                 const ICON = item.icon;
                 return (

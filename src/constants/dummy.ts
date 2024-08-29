@@ -473,18 +473,19 @@ const SUMMARY_SERVICE = [
   {
     title: "Web Design",
     subtitle:
-      "Push the boundaries of design, setting a new standard for how products interact with users.",
+      "Elevate design to new heights by redefining the way users experience and interact with products, setting an innovative benchmark that challenges conventional standards and inspires a fresh perspective on usability.",
     src: webDesign,
   },
   {
     title: "Web Development",
     subtitle:
-      "Create a nicely and friendly website so that people can enjoy it",
+      "Design a welcoming and user-friendly website that offers a delightful experience, making it enjoyable for visitors to navigate and interact with the content seamlessly.",
     src: webDevelop,
   },
   {
     title: "Mobile Development",
-    subtitle: "Create an enjoyable app in mobile platform",
+    subtitle:
+      "Develop a mobile app that not only functions seamlessly but also brings a sense of enjoyment and satisfaction to users, creating an intuitive and engaging experience that makes people look forward to using it every day, enhancing their interactions and adding value to their daily lives.",
     src: mobileDevelop,
   },
 ];

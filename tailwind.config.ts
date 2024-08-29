@@ -81,6 +81,10 @@ const config = {
           500: "#222831",
           600: "#f1f5f9",
         },
+        success: {
+          100: "rgb(225, 245, 235)",
+          200: "#0D7C66",
+        },
       },
       fontFamily: {
         mitr: ["Mitr"],

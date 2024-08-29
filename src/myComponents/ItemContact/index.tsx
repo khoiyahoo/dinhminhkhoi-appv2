@@ -12,8 +12,11 @@ interface Props {
 
 const ItemContact: FC<Props> = ({ children, title, href, className }) => {
   return (
-    <Link href={href} className={cn("flex items-center gap-2", className)}>
-      <div className="w-12 h-12 rounded-2xl bg-gray-200 p-2 flex items-center justify-center">
+    <Link
+      href={href}
+      className={cn("flex items-center gap-2 group", className)}
+    >
+      <div className="w-12 h-12 rounded-2xl bg-gray-200 p-2 flex items-center justify-center transform transition-transform duration-300 group-hover:-translate-y-2">
         {children}
       </div>
       <Typography

@@ -17,6 +17,7 @@ import { useState, type FC } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import SendingLoader from "@/myComponents/SendingLoader";
 import { useMutation } from "@tanstack/react-query";
+import { toast } from "@/components/ui/use-toast";
 
 const FormContact: FC = () => {
   const [sending, setSending] = useState(false);
@@ -73,9 +74,17 @@ const FormContact: FC = () => {
     onSuccess: () => {
       form.reset();
       setSending(false);
+      toast({
+        variant: "success",
+        title: "Send message successful !",
+      });
     },
-    onError: (err) => {
-      console.log(err);
+    onError: () => {
+      toast({
+        variant: "destructive",
+        title: "Send message fail !",
+      });
+      setSending(false);
     },
   });
   return (
@@ -89,7 +98,7 @@ const FormContact: FC = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-2 w-full"
         >
-          <div className="flex gap-4 w-full">
+          <div className="flex flex-col md:flex-row gap-4 w-full">
             <FormField
               control={form.control}
               name="username"
