@@ -21,7 +21,7 @@ const HeroAboutContainer: FC = () => {
     },
   ] as const;
   return (
-    <div className="flex justify-center items-center flex-col md:flex-row pb-12 gap-8">
+    <div className="flex justify-between items-center flex-col md:flex-row pb-12 gap-8">
       <div className="w-full md:w-1/2">
         <div className="flex items-center">
           <Typography size="normal" type="bold" variant="h2">

@@ -83,7 +83,6 @@ const config = {
         },
         success: {
           100: "rgb(225, 245, 235)",
-          200: "#0D7C66",
         },
       },
       fontFamily: {

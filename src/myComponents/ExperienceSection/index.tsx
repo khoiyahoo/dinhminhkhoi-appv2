@@ -29,7 +29,7 @@ const ExperienceSection = () => {
 
   return (
     <section className="pb-12">
-      <div className="container">
+      <div className="container xl:px-52">
         <div className="pt-12">
           <Typography size="normal" type="bold" variant="h2">
             👨🏻‍💻 Work Experience

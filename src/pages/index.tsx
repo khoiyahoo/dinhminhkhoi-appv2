@@ -6,6 +6,7 @@ import Wave from "@/myComponents/Wave";
 import TechStackSection from "@/myComponents/TechStackSection";
 import ServiceSection from "@/myComponents/ServiceSection";
 import ContactSection from "@/myComponents/ContactSection";
+import ProjectSection from "@/myComponents/ProjectSection";
 
 const Home: FC = () => {
   return (
@@ -16,6 +17,7 @@ const Home: FC = () => {
       <Wave classNames="mt-36" />
       <OverviewSection />
       <TechStackSection />
+      <ProjectSection isRecent />
       <ServiceSection />
       <ContactSection />
     </>

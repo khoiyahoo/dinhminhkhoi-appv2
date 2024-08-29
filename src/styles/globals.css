@@ -164,34 +164,3 @@
         transform: translate3d(85px, 0, 0);
     }
 }
-
-@keyframes envFloating {
-	0% {
-		transform: translate(-2px, -5px);
-	}
-
-	100% {
-		transform: translate(0, 5px);
-	}
-}
-
-@keyframes envDropping {
-	0% {
-		background-position: 100px 11px, 115px 35px, 105px 60px;
-		opacity: 1;
-	}
-
-	50% {
-		background-position: 0px 11px, 20px 35px, 5px 60px;
-	}
-
-	60% {
-		background-position: -30px 11px, 0px 35px, -10px 60px;
-	}
-
-	75%,
-	100% {
-		background-position: -30px 11px, -30px 35px, -30px 60px;
-		opacity: 0;
-	}
-}
