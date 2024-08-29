@@ -1,6 +1,6 @@
 import { API } from "@/constants/apiRoute";
-import { IExperience } from "@/interfaces/Experience";
-import api, { MappedResponse, requestHandler } from "@/services/configApi";
+import { type IExperience } from "@/interfaces/Experience";
+import api, { type MappedResponse, requestHandler } from "@/services/configApi";
 
 export const ExperienceService = {
   async getExperiences(): Promise<MappedResponse<IExperience[]>> {

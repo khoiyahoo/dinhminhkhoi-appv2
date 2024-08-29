@@ -1,7 +1,7 @@
 import Typography from "@/myComponents/Typography";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import ExperienceCard from "@/myComponents/ExperienceCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { type IExperience as ExperienceType } from "@/interfaces/Experience";
 import { ExperienceService } from "@/services/experiences";
 import { useQuery } from "@tanstack/react-query";
