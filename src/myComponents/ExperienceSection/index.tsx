@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { toast } from "@/components/ui/use-toast";
 
 const ExperienceSection = () => {
-  const [data, setData] = useState<ExperienceType[]>([]);
+  const [experiences, setExperiences] = useState<ExperienceType[]>([]);
   useQuery({
     queryKey: ["experiences"],
     queryFn: ExperienceService.getExperiences,
@@ -17,7 +17,7 @@ const ExperienceSection = () => {
     },
     onSuccess: (data) => {
       if (!data) return;
-      setData(data);
+      setExperiences(data);
     },
     onError: () => {
       toast({
@@ -37,7 +37,7 @@ const ExperienceSection = () => {
         </div>
         <div className="mt-20 flex flex-col">
           <VerticalTimeline lineColor="#222831">
-            {data.map((experience, index) => {
+            {experiences.map((experience, index) => {
               return <ExperienceCard key={index} experience={experience} />;
             })}
           </VerticalTimeline>
