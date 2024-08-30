@@ -4,3 +4,10 @@ export const getPathName = (pathname: string) => {
   }
   return `${pathname}/`;
 };
+
+export const getCanonicalUrl = (pathname: string) => {
+  return (
+    `${process.env.baseUrl}/${pathname}/` ||
+    `https://dinhminhkhoi.vercel.app/${pathname}/`
+  );
+};
