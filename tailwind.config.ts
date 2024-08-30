@@ -1,6 +1,30 @@
 import type { Config } from "tailwindcss";
-import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 import plugin from "tailwindcss/plugin";
+
+type ColorValue = string | Record<string, string>;
+type ColorPalette = Record<string, ColorValue>;
+
+function flattenColorPalette(colors: ColorPalette): Record<string, string> {
+  const result: Record<string, string> = {};
+
+  const flatten = (obj: ColorPalette | ColorValue, prefix = "") => {
+    if (typeof obj === "string") {
+      result[prefix.slice(0, -1)] = obj;
+    } else {
+      Object.entries(obj).forEach(([key, value]) => {
+        if (typeof value === "string") {
+          result[prefix + key] = value;
+        } else {
+          flatten(value, `${prefix}${key}-`);
+        }
+      });
+    }
+  };
+
+  flatten(colors);
+  return result;
+}
+
 const config = {
   darkMode: ["class"],
   content: [
