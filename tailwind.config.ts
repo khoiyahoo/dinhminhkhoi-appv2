@@ -106,6 +106,9 @@ const config = {
           500: "#222831",
           600: "#f1f5f9",
         },
+        skeleton: {
+          100: "#DDE6ED",
+        },
         blue: {
           200: "#31A8FF",
           500: "#ABC6FF",

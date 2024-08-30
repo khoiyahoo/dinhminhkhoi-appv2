@@ -8,28 +8,28 @@ const ProjectCardSkeleton: FC = () => {
         <div className="bg-text-100 h-full rounded-[1.25rem] py-3 px-4 flex flex-col gap-4">
           <div className="flex gap-1 items-center justify-between">
             <div className="flex gap-1 items-center">
-              <Skeleton className="h-6 w-6" />
-              <Skeleton className="h-6 w-16" />
+              <Skeleton className="h-6 w-6 bg-skeleton-100" />
+              <Skeleton className="h-6 w-16 bg-skeleton-100" />
             </div>
-            <Skeleton className="h-6 w-6" />
+            <Skeleton className="h-6 w-6 bg-skeleton-100" />
           </div>
           <div className="flex flex-col gap-2 flex-1">
-            <Skeleton className="h-4 w-72" />
-            <Skeleton className="h-4 w-64" />
-            <Skeleton className="h-4 w-80" />
-            <Skeleton className="h-4 w-96" />
-            <Skeleton className="h-4 w-72" />
+            <Skeleton className="h-4 w-72 bg-skeleton-100" />
+            <Skeleton className="h-4 w-64 bg-skeleton-100" />
+            <Skeleton className="h-4 w-80 bg-skeleton-100" />
+            <Skeleton className="h-4 w-96 bg-skeleton-100" />
+            <Skeleton className="h-4 w-72 bg-skeleton-100" />
 
-            <Skeleton className="h-4 w-72" />
-            <Skeleton className="h-4 w-64" />
-            <Skeleton className="h-4 w-80" />
-            <Skeleton className="h-4 w-96" />
-            <Skeleton className="h-4 w-72" />
+            <Skeleton className="h-4 w-72 bg-skeleton-100" />
+            <Skeleton className="h-4 w-64 bg-skeleton-100" />
+            <Skeleton className="h-4 w-80 bg-skeleton-100" />
+            <Skeleton className="h-4 w-96 bg-skeleton-100" />
+            <Skeleton className="h-4 w-72 bg-skeleton-100" />
           </div>
 
           <div className="flex gap-1">
             {Array.from({ length: 4 }).map((_, index) => (
-              <Skeleton className="h-8 w-8" key={index} />
+              <Skeleton className="h-8 w-8 bg-skeleton-100" key={index} />
             ))}
           </div>
         </div>

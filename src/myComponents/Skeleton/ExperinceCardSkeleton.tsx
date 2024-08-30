@@ -27,15 +27,15 @@ const ExperienceCardSkeleton: FC = () => {
       }
     >
       <div className="bg-bg-100">
-        <Skeleton className="h-4 w-48" />
-        <Skeleton className="h-4 w-52 mt-2" />
+        <Skeleton className="h-4 w-48 bg-skeleton-100" />
+        <Skeleton className="h-4 w-52 mt-2 bg-skeleton-100" />
       </div>
       <ul className="mt-5 list-disc ml-5 space-y-2">
-        <Skeleton className="h-4 w-60" />
-        <Skeleton className="h-4 w-64" />
-        <Skeleton className="h-4 w-56" />
-        <Skeleton className="h-4 w-60" />
-        <Skeleton className="h-4 w-64" />
+        <Skeleton className="h-4 w-60 bg-skeleton-100" />
+        <Skeleton className="h-4 w-64 bg-skeleton-100" />
+        <Skeleton className="h-4 w-56 bg-skeleton-100" />
+        <Skeleton className="h-4 w-60 bg-skeleton-100" />
+        <Skeleton className="h-4 w-64 bg-skeleton-100" />
       </ul>
       <Wave classNameWave="waves-card rounded-b-md" classNames="mt-8" />
     </VerticalTimelineElement>
