@@ -9,6 +9,9 @@ import { useRouter } from "next/router";
 import { getPathName } from "@/utils/function";
 import { cn } from "@/lib/utils";
 import MenuHeaderMobile from "@/myComponents/MenuHeader";
+import useScrollToSection from "@/hooks/useScrollToSection";
+import Typography from "../Typography";
+
 const Header: FC = () => {
   const { theme } = useTheme();
   const router = useRouter();
@@ -20,25 +23,46 @@ const Header: FC = () => {
       "w-[1.5rem] h-[0.15rem] bg-primary rounded-full block transition-all duration-600 ease-out",
   } as const;
 
+  const handleScrollContact = useScrollToSection("contact");
+
   return (
     <header className="sticky top-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center max-sm:justify-between xl:pl-56 xl:pr-56">
         <div className="hidden sm:flex">
           <nav className="flex items-center gap-4 text-sm lg:gap-6">
-            {ROUTES.map((item, index) => (
-              <Link
-                key={index}
-                href={item.route}
-                className={cn(
-                  "transition-colors hover:text-foreground font-medium",
-                  getPathName(router.pathname).includes(getPathName(item.route))
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                )}
-              >
-                {item.title}
-              </Link>
-            ))}
+            {ROUTES.map((item, index) =>
+              item.title === "Contact" ? (
+                <div
+                  onClick={handleScrollContact}
+                  key={index}
+                  className="bg-primary px-2 py-1 rounded-sm transition-colors hover:text-foreground font-medium cursor-pointer"
+                >
+                  <Typography
+                    size="normal"
+                    type="bold"
+                    variant="h4"
+                    className="text-sm text-secondary"
+                  >
+                    {item.title}
+                  </Typography>
+                </div>
+              ) : (
+                <Link
+                  key={index}
+                  href={item.route}
+                  className={cn(
+                    "transition-colors hover:text-foreground font-medium",
+                    getPathName(router.pathname).includes(
+                      getPathName(item.route)
+                    )
+                      ? "text-foreground"
+                      : "text-foreground/60"
+                  )}
+                >
+                  {item.title}
+                </Link>
+              )
+            )}
           </nav>
         </div>
         <MenuHeaderMobile>

@@ -5,7 +5,7 @@ import { CONTACT } from "@/constants/dummy";
 import ItemContact from "@/myComponents/ItemContact";
 const ContactSection: FC = () => {
   return (
-    <section className="rounded-t-3xl xl:rounded-t-[8.5rem] pt-12">
+    <section className="rounded-t-3xl xl:rounded-t-[8.5rem] pt-12" id="contact">
       <div className="container xl:px-52">
         <Typography size="normal" type="bold" variant="p">
           Contact

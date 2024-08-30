@@ -5,7 +5,7 @@ import { SUMMARY_SERVICE } from "@/constants/dummy";
 
 const ServiceSection: FC = () => {
   return (
-    <section className="rounded-t-3xl xl:rounded-t-[8.5rem] pt-12">
+    <section className="pt-12">
       <div className="container xl:px-52">
         <Typography size="normal" type="bold" variant="p">
           Services
