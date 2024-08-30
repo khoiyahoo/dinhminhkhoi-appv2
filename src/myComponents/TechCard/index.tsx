@@ -10,7 +10,7 @@ interface Props {
 const TechCard: FC<Props> = ({ title, itemCards }) => {
   return (
     <div className="w-full">
-      <div className="w-full bg-conversion-01 p-[1px] rounded-[20px] shadow-lg">
+      <div className="w-full bg-conversion-01 p-[1px] rounded-[20px] shadow-discovery-card-yellow-500">
         <Typography
           size="normal"
           type="bold"

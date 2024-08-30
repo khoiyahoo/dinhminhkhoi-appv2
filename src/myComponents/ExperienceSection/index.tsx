@@ -6,10 +6,11 @@ import { type IExperience as ExperienceType } from "@/interfaces/Experience";
 import { ExperienceService } from "@/services/experiences";
 import { useQuery } from "@tanstack/react-query";
 import { toast } from "@/components/ui/use-toast";
+import ExperienceCardSkeleton from "@/myComponents/Skeleton/ExperinceCardSkeleton";
 
 const ExperienceSection = () => {
   const [experiences, setExperiences] = useState<ExperienceType[]>([]);
-  useQuery({
+  const { isLoading } = useQuery({
     queryKey: ["experiences"],
     queryFn: ExperienceService.getExperiences,
     select: (res) => {
@@ -36,10 +37,14 @@ const ExperienceSection = () => {
           </Typography>
         </div>
         <div className="mt-20 flex flex-col">
-          <VerticalTimeline lineColor="#222831">
-            {experiences.map((experience, index) => {
-              return <ExperienceCard key={index} experience={experience} />;
-            })}
+          <VerticalTimeline lineColor="#222831" animate={false}>
+            {isLoading
+              ? Array.from({ length: 5 }).map((_, index) => (
+                  <ExperienceCardSkeleton key={index} />
+                ))
+              : experiences.map((experience, index) => {
+                  return <ExperienceCard key={index} experience={experience} />;
+                })}
           </VerticalTimeline>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
-
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
+import plugin from "tailwindcss/plugin";
 const config = {
   darkMode: ["class"],
   content: [
@@ -81,8 +82,30 @@ const config = {
           500: "#222831",
           600: "#f1f5f9",
         },
+        blue: {
+          200: "#31A8FF",
+          500: "#ABC6FF",
+          800: "#2950A3",
+          900: "#477CEB",
+        },
+        yellow: {
+          500: "#FEDBA2",
+          800: "#FAC46B",
+        },
         success: {
           100: "rgb(225, 245, 235)",
+          200: "rgba(0, 221, 140, 0.40)",
+        },
+        orange: {
+          100: "#FF9A00",
+          200: "#FF8465",
+          900: "#FCCE82",
+        },
+        pink: {
+          300: "#FF61F6",
+          500: "#FFB4E4",
+          800: "#DA69B1",
+          900: "#FA99D7",
         },
       },
       fontFamily: {
@@ -114,7 +137,40 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "shadow-discovery-card": (color) => ({
+            boxShadow: `0px 0px 5px 0px rgba(240, 240, 240, 0.40) inset, 0px 0px 8px 0px ${color}`,
+          }),
+          "shadow-discovery-icon": (color) => ({
+            boxShadow: `0px 0px 12px 0px ${color}`,
+          }),
+          "shadow-half-circle": (size) => ({
+            boxShadow: `0px ${size} ${size} 0px rgba(0, 0, 0, 0.25)`,
+          }),
+          "shadow-tool-sp": (color) => ({
+            boxShadow: `0px 0px 5.278px 0px ${color}`,
+          }),
+          "shadow-tool-tablet": (color) => ({
+            boxShadow: `0px 0px 15px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 10px 0px ${color}`,
+          }),
+          "shadow-workflow": (color) => ({
+            boxShadow: `0px 0px 10px 0px ${color}`,
+          }),
+        },
+        { values: flattenColorPalette(theme("colors")) }
+      );
+    }),
+    plugin(function ({ addVariant }) {
+      addVariant(
+        "mobile-only",
+        "@media screen and (max-width: theme('screens.sm'))"
+      ); // instead of hard-coded 640px use sm breakpoint value from config. Or anything
+    }),
+  ],
 } satisfies Config;
 
 export default config;

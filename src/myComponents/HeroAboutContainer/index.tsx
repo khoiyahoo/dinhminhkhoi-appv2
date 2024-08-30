@@ -41,7 +41,7 @@ const HeroAboutContainer: FC = () => {
           knowledge.
         </Typography>
       </div>
-      <div className="w-full rounded-lg border border-orange-100 p-4 md:w-auto shadow-lg">
+      <div className="w-full rounded-lg border border-orange-100 p-4 md:w-auto shadow-discovery-card-orange-100">
         <div className="flex gap-2">
           <Typography
             size="normal"

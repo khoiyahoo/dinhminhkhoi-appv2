@@ -5,6 +5,8 @@ import { type IProjects } from "@/interfaces/Projects";
 import { ProjectsService } from "@/services/projects";
 import { useQuery } from "@tanstack/react-query";
 import { toast } from "@/components/ui/use-toast";
+import ProjectCardSkeleton from "@/myComponents/Skeleton/ProjectSekeleton";
+import Link from "next/link";
 
 interface Props {
   isRecent?: boolean;
@@ -13,7 +15,7 @@ interface Props {
 const ProjectSection: FC<Props> = ({ isRecent = false }) => {
   const [projects, setProjects] = useState<IProjects[]>([]);
 
-  useQuery({
+  const { isLoading } = useQuery({
     queryKey: ["projects"],
     queryFn: ProjectsService.getProjects,
     select: (res) => {
@@ -39,23 +41,46 @@ const ProjectSection: FC<Props> = ({ isRecent = false }) => {
   return (
     <section className="pt-12">
       <div className="container xl:px-52">
-        <Typography size="normal" type="bold" variant="h4" className="text-2xl">
-          📂 {isRecent ? "Recent projects" : "Projects"}
-        </Typography>
-        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-          {displayedProjects.map((item, index) => (
-            <ProjectCard
-              key={index}
-              openSource={item.openSource}
-              href={item.link}
-              icon={item.icon}
-              src={item.src}
-              title={item.name}
-              description={item.description}
-              tags={item.techs}
-              responsibility={item.responsibility}
-            />
-          ))}
+        <div className="flex items-end gap-2">
+          <Typography
+            size="normal"
+            type="bold"
+            variant="h4"
+            className="text-2xl"
+          >
+            📂 {isRecent ? "Recent projects" : "Projects"}
+          </Typography>
+          {isRecent && (
+            <Link href="/projects">
+              <Typography
+                size="normal"
+                type="bold"
+                variant="p"
+                className="text-md"
+              >
+                ...more
+              </Typography>
+            </Link>
+          )}
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+          {isLoading
+            ? Array.from({ length: isRecent ? 4 : 8 }).map((_, index) => (
+                <ProjectCardSkeleton key={index} />
+              ))
+            : displayedProjects.map((item, index) => (
+                <ProjectCard
+                  key={index}
+                  openSource={item.openSource}
+                  href={item.link}
+                  icon={item.icon}
+                  src={item.src}
+                  title={item.name}
+                  description={item.description}
+                  tags={item.techs}
+                  responsibility={item.responsibility}
+                />
+              ))}
         </div>
       </div>
     </section>

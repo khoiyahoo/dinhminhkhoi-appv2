@@ -5,10 +5,11 @@ import { useQuery } from "@tanstack/react-query";
 import { SkillsService } from "@/services/skills";
 import { type ISkill } from "@/interfaces/Skills";
 import { toast } from "@/components/ui/use-toast";
+import TechCardSkeleton from "@/myComponents/Skeleton/TeckCardSkeleton";
 
 const TechStackSection: FC = () => {
   const [skills, setSkills] = useState<ISkill[]>([]);
-  useQuery({
+  const { isLoading } = useQuery({
     queryKey: ["skills"],
     queryFn: SkillsService.getSkills,
     select: (res) => {
@@ -52,9 +53,17 @@ const TechStackSection: FC = () => {
             </Typography>
           </div>
           <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-4">
-            {skills.map((item, index) => (
-              <TechCard title={item.name} itemCards={item.techs} key={index} />
-            ))}
+            {isLoading
+              ? Array.from({ length: 4 }).map((_, index) => (
+                  <TechCardSkeleton key={index} />
+                ))
+              : skills.map((item, index) => (
+                  <TechCard
+                    title={item.name}
+                    itemCards={item.techs}
+                    key={index}
+                  />
+                ))}
           </div>
         </div>
       </div>

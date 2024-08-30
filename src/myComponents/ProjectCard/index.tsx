@@ -31,10 +31,10 @@ const ProjectCard: FC<Props> = ({
       target="_blank"
       className="max-w-full group cursor-pointer h-full"
     >
-      <div className="w-full h-full bg-primary p-[1px] pl-[3px] rounded-[1.25rem] shadow-xl ease-in-out duration-100 hover:bg-conversion-01 hover:-translate-y-1">
+      <div className="w-full h-full bg-primary p-[1px] pl-[3px] rounded-[1.25rem] shadow-discovery-card-orange-100 ease-in-out duration-100 hover:bg-conversion-01 hover:-translate-y-1">
         <div className="bg-text-100 h-full rounded-[1.25rem] py-3 px-4 flex flex-col gap-4">
           <div className="flex gap-1 items-center justify-between">
-            <div className="flex gap-1 items-end">
+            <div className="flex gap-1 items-center">
               {icon && <span>{icon}</span>}
               {src && (
                 <Image

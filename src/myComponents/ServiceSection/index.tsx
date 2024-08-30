@@ -29,13 +29,15 @@ const ServiceSection: FC = () => {
               💡 We do awesome services for our clients
             </Typography>
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 lg:gap-4 gap-14 auto-cols-fr mt-10">
+          <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 lg:gap-4 gap-14 auto-cols-fr mt-14">
             {SUMMARY_SERVICE.map((item, index) => (
               <ServiceCard
                 key={index}
                 title={item.title}
                 subTitle={item.subtitle}
                 src={item.src}
+                classNames={item.boxShadow}
+                classNamesIcon={item.boxShadow}
               />
             ))}
           </div>

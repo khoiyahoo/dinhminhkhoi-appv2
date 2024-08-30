@@ -20,7 +20,7 @@ const CardPortfolio: FC<Props> = ({
   return (
     <div
       className={cn(
-        "bg-card-portfolio bg-cover lg:w-[21.875rem] w-full h-[25.2rem] rounded-2xl shadow-xl cursor-pointer group",
+        "bg-card-portfolio bg-cover lg:w-[21.875rem] w-full h-[25.2rem] rounded-2xl shadow-discovery-card-orange-100 cursor-pointer group",
         className
       )}
     >
@@ -29,7 +29,7 @@ const CardPortfolio: FC<Props> = ({
         target={target}
         className="flex flex-col justify-center items-center w-full h-full pt-[7rem] px-10 pb-10"
       >
-        <div className="w-[6.25rem] h-[6.25rem] bg-gray-200 rounded-full shadow-circle transform transition-transform duration-300 group-hover:-translate-y-2">
+        <div className="w-[6.25rem] h-[6.25rem] bg-gray-200 rounded-full shadow-discovery-icon-orange-100 transform transition-transform duration-300 group-hover:-translate-y-2">
           <Image src={iconWork} alt="icon-portfolio" width={100} height={100} />
         </div>
         <div className="flex flex-col justify-start items-center gap-2 w-full h-full">
