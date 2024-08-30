@@ -1,9 +1,20 @@
-import { type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import Typography from "@/myComponents/Typography";
 import CardPortfolio from "@/myComponents/CardPortfolio";
 import { TabsMenu } from "@/myComponents/TabsMenu";
+import CardPortfolioSkeleton from "@/myComponents/Skeleton/CardProfolioSkeleton";
 
 const OverviewSection: FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 300); // Adjust this time as needed
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <section className="rounded-t-3xl xl:rounded-t-[8.5rem] pt-12">
       <div className="container xl:px-52">
@@ -35,7 +46,14 @@ const OverviewSection: FC = () => {
             </Typography>
             <TabsMenu />
           </div>
-          <CardPortfolio href="https://github.com/khoiyahoo" target="_blank" />
+          {isLoading ? (
+            <CardPortfolioSkeleton />
+          ) : (
+            <CardPortfolio
+              href="https://github.com/khoiyahoo"
+              target="_blank"
+            />
+          )}
         </div>
       </div>
     </section>
