@@ -10,7 +10,7 @@ import { getPathName } from "@/utils/function";
 import { cn } from "@/lib/utils";
 import MenuHeaderMobile from "@/myComponents/MenuHeader";
 import useScrollToSection from "@/hooks/useScrollToSection";
-import Typography from "../Typography";
+import Typography from "@/myComponents/Typography";
 
 const Header: FC = () => {
   const { theme } = useTheme();
