@@ -60,7 +60,7 @@ const HeroHomeContainer: FC = () => {
         >
           🌱 👨🏻‍💻 I am a guy with a creative mind and like design. I would like to
           learn and discover something new every day. Currently work as a Web
-          developer.Besides, I like to eat 🍽️ and travel everywhere 🚌
+          developer. Besides, I like to eat 🍽️ and travel everywhere 🚌
         </Typography>
         <TypeAnimation
           sequence={["Web Developer", 1000, "A Freelancer", 1000]}
