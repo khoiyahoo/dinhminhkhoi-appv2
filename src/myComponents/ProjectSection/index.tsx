@@ -1,13 +1,12 @@
 import { useMemo, useState, type FC } from "react";
 import Typography from "@/myComponents/Typography";
-import ProjectCard from "@/myComponents/ProjectCard";
 import { type IProjects } from "@/interfaces/Projects";
 import { ProjectsService } from "@/services/projects";
 import { useQuery } from "@tanstack/react-query";
 import { toast } from "@/components/ui/use-toast";
 import ProjectCardSkeleton from "@/myComponents/Skeleton/ProjectSekeleton";
 import Link from "next/link";
-
+import ProjectCard from "@/myComponents/ProjectCard";
 interface Props {
   isRecent?: boolean;
 }
@@ -79,6 +78,10 @@ const ProjectSection: FC<Props> = ({ isRecent = false }) => {
                   description={item.description}
                   tags={item.techs}
                   responsibility={item.responsibility}
+                  colorOverlay={item.colorOverlay}
+                  colorCircle={item.colorCircle}
+                  imagePreview={item.imagePreview}
+                  live={item.live}
                 />
               ))}
         </div>

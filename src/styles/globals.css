@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -61,6 +68,7 @@
   }
   .hero-area {
     position: relative;
+
 }
 
 .waves {
@@ -81,6 +89,22 @@
   max-height: 30px;
   bottom: 0;
   left: 0;
+}
+
+.our-gallery .lg-backdrop {
+  background: #111111d4;
+}
+
+.our-gallery .lg-next, .our-gallery .lg-prev {
+  background: linear-gradient(92deg, #FF6B00 0%, #F90 100%);
+}
+
+.our-gallery .lg-icon {
+  color: white;
+}
+
+.our-gallery .lg-toolbar .lg-icon {
+  color: white;
 }
 
 .parallax>use {
@@ -108,14 +132,6 @@
 }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
 
 @layer utilities {
   .dash {
@@ -147,6 +163,7 @@
     background-position: 0px 11px, 8px 35px, 0px 60px;
     animation: envDropping 0.75s linear infinite;
   }
+  
 }
 
 @keyframes dash {

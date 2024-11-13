@@ -1,4 +1,4 @@
 {
-    "*.{ts,tsx,js}": "yarn format",
-    "!(.ladle/*).{ts,tsx,js}": "yarn lint"
+    "*.{ts,tsx,js}": "pnpm format",
+    "!(.ladle/*).{ts,tsx,js}": "pnpm lint"
 }
