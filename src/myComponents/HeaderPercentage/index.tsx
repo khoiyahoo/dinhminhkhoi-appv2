@@ -25,7 +25,7 @@ const HeaderPercentage: FC = () => {
   return (
     <div className="flex flex-col w-full items-start">
       <div
-        className="flex-none w-full h-1 bg-secondary"
+        className="flex-none w-full h-1 bg-conversion-01"
         style={{ width: `${scrollPercentage}%` }}
       ></div>
     </div>

@@ -7,7 +7,7 @@ const HeroHomeContainer: FC = () => {
     <div className="flex justify-start flex-col sm:flex-row pb-12 gap-4">
       <div className="w-full">
         <div className="flex items-center">
-          <Typography
+          {/* <Typography
             size="normal"
             type="bold"
             variant="h2"
@@ -50,7 +50,7 @@ const HeroHomeContainer: FC = () => {
             <span className="animate-text bg-conversion-01 bg-clip-text text-transparent ml-[1rem]">
               Khoi
             </span>
-          </Typography>
+          </Typography> */}
         </div>
         <Typography
           size="small"

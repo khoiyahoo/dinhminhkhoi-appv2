@@ -2,14 +2,13 @@ import { type FC } from "react";
 import HeroSection from "@/myComponents/HeroSection";
 import HeroHomeContainer from "@/myComponents/HeroHomeContainer";
 import OverviewSection from "@/myComponents/OverviewSection";
-import Wave from "@/myComponents/Wave";
 import TechStackSection from "@/myComponents/TechStackSection";
 import ServiceSection from "@/myComponents/ServiceSection";
 import ContactSection from "@/myComponents/ContactSection";
 import ProjectSection from "@/myComponents/ProjectSection";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
-
+import Cloud3D from "@/myComponents/Cloud3D";
 const Home: FC = () => {
   return (
     <>
@@ -25,7 +24,7 @@ const Home: FC = () => {
       <HeroSection>
         <HeroHomeContainer />
       </HeroSection>
-      <Wave classNames="mt-36" />
+      <Cloud3D />
       <OverviewSection />
       <TechStackSection />
       <ProjectSection isRecent />
